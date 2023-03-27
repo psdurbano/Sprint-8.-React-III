@@ -4,7 +4,7 @@ import { FrameStarShips } from "../styles/styled";
 import logo from "../assets/logo.webp";
 import React, { useState, useContext, useEffect } from "react";
 import { StarsContext } from "../context/contextStarship";
-import { InfoShip } from "../components/infoShip";
+import { ShipCard } from "../components/ShipCard";
 
 export function ShipList() {
   const Ship = useContext(StarsContext);
@@ -22,11 +22,9 @@ export function ShipList() {
 
   return (
     <>
-      <img className="logo" src={logo} alt="logo de star wars" />
-
       {Ship.map((ship) => (
-        <Link to={"/InfoShip/" + ship.name} key={ship.name}>
-          <FrameStarShips onClick={() => saveName(ship.name)}>
+        <Link to={"/ShipCard/" + ship.name}>
+          <FrameStarShips key={ship.name} onClick={() => saveName(ship.name)}>
             <p className="starshipName"> {ship.name.toUpperCase()} </p>
             <p className="starshipModel"> {ship.model} </p>
           </FrameStarShips>

@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
 export const FrameStarShips = styled.button`
-  text-align: left;
   color: whitesmoke;
   background-color: #151515;
-  border-radius: 0.25rem;
-  margin: 1rem;
+  border-radius: 0.2rem;
+  margin: 2px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   padding-left: 1rem;
   align-items: center;
-  height: 5rem;
-  width: 700px;
+  height: 60%;
+  width: auto;
+  flex-direction: column;
+  margin: 50px;
 `;
 
 export const InfoShips = styled.div`

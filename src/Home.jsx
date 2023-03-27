@@ -1,14 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
 import { ShipList } from "../src/components/ShipList";
-import { InfoShip } from "../src/components/infoShip";
+import { Header } from "../src/components/header";
+import "./index.css";
 
-const Router = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route index element={<ShipList />} />
-      <Route path="/InfoShip/:shipName" element={<InfoShip />} />
-    </Routes>
-  </BrowserRouter>
-);
-
-export default Router;
+export function Home() {
+  return (
+    <>
+      <Header />
+      <ShipList />
+    </>
+  );
+}
