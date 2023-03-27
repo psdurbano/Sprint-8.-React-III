@@ -1,9 +1,10 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
+  font-family: "Jura", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  justify-content: center;
+  align-items: center;
+  display: "flex";
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -13,47 +14,74 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
+  margin: auto;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0a0b0b;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
 }
 
+/* Header */
+.logo {
+  margin-left: 42%;
+  margin-top: 2rem;
+  margin-top: 30px;
+  width: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.login {
+  margin-left: 54rem;
+  margin-top: -2rem;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.1px solid rgb(133, 133, 133);
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.nav {
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(211, 211, 211);
+  font-weight: 600;
+  padding: 20px;
+}
+
+/* Welcome */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-decoration: none;
+}
+p {
+  text-decoration: none;
 }
 
-button {
-  border-radius: 25px;
-  border: 1px solid transparent;
-  padding: 1em 1em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  color: #242424;
-  background-color: yellowgreen;
-  cursor: pointer;
-  transition: border-color 0.25s;
+a {
+  text-decoration: none;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+/* Register */
+.link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -62,7 +90,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: white;
   }
   button {
     background-color: #f9f9f9;
