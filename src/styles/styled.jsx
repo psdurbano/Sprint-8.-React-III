@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const FrameStarShips = styled.div`
+export const FrameStarShips = styled.button`
+text-align: left;
+  color: whitesmoke;
   background-color: #151515;
   border-radius: 0.25rem;
   margin: 1rem;

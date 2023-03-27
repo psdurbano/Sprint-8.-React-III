@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import Header from "./components/header";
 import { StarsContext } from "./context/contextStarship";
 import { FrameStarShips } from "./styles/styled";
-import logo from "./assets/logo.webp";
 
 function App() {
   // Obtener la lista de naves espaciales desde el contexto
@@ -10,9 +10,7 @@ function App() {
   // Renderizar el componente
   return (
     <div>
-      {/* Mostrar el logo */}
-      <img className="logo" src={logo} alt="logo de star wars" />
-
+      <Header/>
       {/* Recorrer la lista de naves y mostrar sus nombres y modelos */}
       {starships.map((starship) => (
         <FrameStarShips key={starship.name}>

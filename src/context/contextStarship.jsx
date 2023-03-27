@@ -5,20 +5,16 @@ import App from "../App";
 export const StarsContext = createContext();
 
 export const StarsContextProvider = (props) => {
-  // Función para obtener los datos de la API
-  const fetchFunction = () => {
-    return fetch("https://swapi.dev/api/starships/").then((res) => res.json());
-  };
-
   // Estado para guardar las StarShips
   const [starShips, setStarShips] = useState([]);
 
   // UseEffect para obtener los datos de la API al cargar la página
   useEffect(() => {
-    fetchFunction()
-      .then((res) => {
+    fetch("https://swapi.dev/api/starships/")
+      .then((res) => res.json())
+      .then((data) => {
         // Guardamos las StarShips en el estado
-        setStarShips(res.results);
+        setStarShips(data.results);
       })
       .catch((error) => {
         console.error("Error", error);
