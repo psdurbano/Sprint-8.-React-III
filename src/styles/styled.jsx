@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
 export const FrameStarShips = styled.button`
+  border: 1px solid whitesmoke;
+  cursor: pointer;
   color: whitesmoke;
   background-color: #151515;
   border-radius: 0.2rem;
   margin: 2px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding-left: 1rem;
-  align-items: center;
   height: 60%;
-  width: auto;
+  width: -webkit-fill-available;
   flex-direction: column;
-  margin: 50px;
+  margin: 25px;
 `;
 
 export const InfoShips = styled.div`
@@ -29,17 +30,21 @@ export const InfoShips = styled.div`
 `;
 
 export const TextPrimary = styled.div`
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+export const TextSecondary = styled.div`
+  font-family: "Orbitron", sans-serif;
   display: flex;
   font-size: 12px;
   justify-content: center;
   flex-direction: column;
-`;
-
-export const TextSecondary = styled.div`
-  display: flex;
-  font-size: 10px;
-  justify-content: center;
-  flex-direction: column;
+  align-items: flex-start;
 `;
 
 export const CloseButton = styled.button`
