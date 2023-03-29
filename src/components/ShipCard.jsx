@@ -1,7 +1,13 @@
 import React, { useContext } from "react";
-import { TextPrimary, TextSecondary, FrameStarShips } from "../styles/styled";
+import {
+  FrameStarShips,
+  Titlestyled,
+  StyledText,
+  StyledImage,
+} from "../styles/styled";
 import { StarsContext } from "../context/contextStarship";
 import { useParams } from "react-router-dom";
+import defaultImage from "../assets/default-image.png";
 
 export const ShipCard = () => {
   const Ships = useContext(StarsContext);
@@ -15,18 +21,22 @@ export const ShipCard = () => {
   return (
     <>
       <FrameStarShips>
-        <h3>{currentShip.name.toUpperCase()}</h3>
+        <Titlestyled>{currentShip.name.toUpperCase()}</Titlestyled>
 
-        <img src={image} alt="No se pudo mostrar la imagen de la nave" />
+        <StyledImage
+          src={image}
+          alt="No se pudo mostrar la imagen de la nave"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = defaultImage;
+          }}
+        />
 
-        <TextPrimary>
+        <StyledText>
           <p>Model: {currentShip.model}</p>
           <p>Starship class: {currentShip.starship_class}</p>
           <p>Manufacturer: {currentShip.manufacturer}</p>
           <p>cost: {currentShip.cost}</p>
-        </TextPrimary>
-
-        <TextSecondary>
           <p>Crew: {currentShip.crew}</p>
           <p>Passengers: {currentShip.passengers}</p>
           <p>Cargo capacity: {currentShip.cargo_capacity}</p>
@@ -37,7 +47,7 @@ export const ShipCard = () => {
           </p>
           <p>Hyperdrive rating: {currentShip.hyperdrive_rating}</p>
           <p>Maximum speed in real space: {currentShip.MGLT + "MGLT"}</p>
-        </TextSecondary>
+        </StyledText>
       </FrameStarShips>
     </>
   );

@@ -1,32 +1,27 @@
 import { Link } from "react-router-dom";
 import "../index.css";
 import { FrameStarShips } from "../styles/styled";
-import logo from "../assets/logo.webp";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { StarsContext } from "../context/contextStarship";
 
-
+// Definiendo el componente ShipList
 export function ShipList() {
-  const Ship = useContext(StarsContext);
+  // Obteniendo la lista de naves espaciales del contexto StarsContext
+  const ships = useContext(StarsContext);
 
-  const [currentShip, setCurrentShip] = useState("");
-  const [showInfo, setShowInfo] = useState(false);
-
-  useEffect(() => {
-    setShowInfo(!showInfo);
-  }, [currentShip]);
-
-  const saveName = (shipName) => {
-    setCurrentShip(shipName);
-  };
-
+  // Retornando el JSX del componente
   return (
     <>
-      {Ship.map((ship) => (
-        <Link key={ship.name} to={"/ShipCard/" + ship.name}>
-          <FrameStarShips key={ship.name} onClick={() => saveName(ship.name)}>
-            <p className="starshipName"> {ship.name.toUpperCase()} </p>
-            <p className="starshipModel"> {ship.model} </p>
+      {/* Iterando sobre la lista de naves espaciales */}
+      {ships.map(({ name, model }) => (
+        // Creando un componente Link para cada nave espacial
+        <Link key={name} to={"/ShipCard/" + name}>
+          {/* Creando un componente FrameStarShips para cada nave espacial */}
+          <FrameStarShips key={name}>
+            {/* Mostrando el nombre de la nave espacial en mayúsculas */}
+            <p className="starshipName">{name.toUpperCase()}</p>
+            {/* Mostrando el modelo de la nave espacial */}
+            <p className="starshipModel">{model}</p>
           </FrameStarShips>
         </Link>
       ))}

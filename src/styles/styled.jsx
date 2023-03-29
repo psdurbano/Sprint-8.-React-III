@@ -1,66 +1,55 @@
 import styled from "styled-components";
 
-export const FrameStarShips = styled.button`
-  border: 1px solid whitesmoke;
-  cursor: pointer;
+export const FrameStarShips = styled.div`
+  background-image: url("https://wallpaperaccess.com/full/17493.jpg");
+  background-size: cover;
+  background-position: center;
   color: whitesmoke;
-  background-color: #151515;
-  border-radius: 0.2rem;
-  margin: 2px;
-  display: flex;
-  justify-content: left;
-  padding-left: 1rem;
-  height: 60%;
+  border: 1px solid whitesmoke;
   width: -webkit-fill-available;
-  flex-direction: column;
-  margin: 25px;
-`;
-
-export const InfoShips = styled.div`
-  background-color: #151515;
-  border-radius: 0.2rem;
-  margin: 2px;
-  display: flex;
-  justify-content: center;
-  padding-left: 1rem;
+  height: auto;
+  background: #000000;
+  border: solid 4px #333;
+  box-shadow: -5px 5px #333;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.7fr 1.8fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title title title"
+    "img img tx1 tx1"
+    "img img tx1 tx1";
+  justify-content: start;
+  align-content: center;
+  justify-items: center;
   align-items: center;
-  height: 700px;
-  width: auto;
-  flex-direction: column;
+  :hover {
+    margin: 10px 10px 0 0;
+    box-shadow: 0px 0px #333;
+  }
 `;
 
-export const TextPrimary = styled.div`
+export const Titlestyled = styled.h3`
   font-family: "Orbitron", sans-serif;
-  display: flex;
+  color: whitesmoke;
+  justify-self: center;
+  align-self: start;
+  grid-area: title;
+`;
+
+export const StyledText = styled.div`
+  font-family: "Orbitron", sans-serif;
   font-size: 15px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: tx1;
 `;
 
-export const TextSecondary = styled.div`
-  font-family: "Orbitron", sans-serif;
-  display: flex;
-  font-size: 12px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-export const CloseButton = styled.button`
-  font-size: 10px;
-  font-weight: bold;
-  color: white;
-  border-color: white;
-  border-radius: 60px;
-  background-color: #151515;
-  margin: 8px;
-`;
-
-export const image = styled.img`
-  width: 20%;
-  top: 3.5rem;
-  right: 5rem;
-  display: flex;
-  gap: 1.5rem;
+export const StyledImage = styled.img`
+  justify-self: stretch;
+  align-self: center;
+  grid-area: img;
 `;
