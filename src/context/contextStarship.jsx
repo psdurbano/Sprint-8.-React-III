@@ -33,7 +33,7 @@ useEffect(() => {
 const handleScroll = () => {
   const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
   if (scrollTop + clientHeight >= scrollHeight) {
-    setPage((prevPage) => prevPage + 1);
+    setPage((prevPage) => prevPage < 4 ? prevPage + 1: prevPage);
   }
 };
 
