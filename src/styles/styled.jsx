@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
+// ShipCard Styles
 export const FrameStarShips = styled.div`
-  background-image: url("https://wallpaperaccess.com/full/17493.jpg");
-  background-size: cover;
-  background-position: center;
+  margin: 2%;
   color: whitesmoke;
-  border: 1px solid whitesmoke;
   width: -webkit-fill-available;
   height: auto;
   background: #000000;
-  border: solid 4px #333;
-  box-shadow: -5px 5px #333;
+  border: solid 2px #333;
+  box-shadow: -2px 2px #333;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   flex-direction: row;
@@ -41,15 +39,42 @@ export const Titlestyled = styled.h3`
 `;
 
 export const StyledText = styled.div`
-  font-family: "Orbitron", sans-serif;
-  font-size: 15px;
   justify-self: stretch;
   align-self: stretch;
   grid-area: tx1;
 `;
 
 export const StyledImage = styled.img`
+  margin: 2%;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-radius: 10%;
   justify-self: stretch;
   align-self: center;
   grid-area: img;
+`;
+
+//ShipList Styles
+
+export const StyleStarshipList = styled.div`
+  align-items: start;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+  margin: 2%;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  width: inherit;
+  height: inherit;
+  background: #000000;
+  border: solid 2px #333;
+  box-shadow: -2px 2px #333;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  :hover {
+    margin: 10px 10px 0 0;
+    box-shadow: 0px 0px #333;
+  }
 `;

@@ -33,20 +33,53 @@ export const ShipCard = () => {
         />
 
         <StyledText>
-          <p>Model: {currentShip.model}</p>
-          <p>Starship class: {currentShip.starship_class}</p>
-          <p>Manufacturer: {currentShip.manufacturer}</p>
-          <p>cost: {currentShip.cost}</p>
-          <p>Crew: {currentShip.crew}</p>
-          <p>Passengers: {currentShip.passengers}</p>
-          <p>Cargo capacity: {currentShip.cargo_capacity}</p>
-          <p>Consumables: {currentShip.consumables}</p>
-          <p>Length: {currentShip.length}</p>
-          <p>
-            Maximum atmosphering speed: {currentShip.max_atmosphering_speed}
-          </p>
-          <p>Hyperdrive rating: {currentShip.hyperdrive_rating}</p>
-          <p>Maximum speed in real space: {currentShip.MGLT + "MGLT"}</p>
+          <div className="text-wrap">
+            <p>Model:</p> <p className="p-info"> {currentShip.model}</p>
+          </div>
+
+          <div className="text-wrap">
+            <p>Starship class:</p>{" "}
+            <p className="p-info"> {currentShip.starship_class}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Manufacturer:</p>{" "}
+            <p className="p-info"> {currentShip.manufacturer}</p>
+          </div>
+          <div className="text-wrap">
+            <p>cost:</p>{" "}
+            <p className="p-info"> {currentShip.cost || "Unknown"}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Crew:</p> <p className="p-info"> {currentShip.crew}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Passengers:</p>{" "}
+            <p className="p-info"> {currentShip.passengers}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Cargo capacity:</p>{" "}
+            <p className="p-info"> {currentShip.cargo_capacity}</p>
+          </div>
+
+          <div className="text-wrap">
+            <p>Consumables:</p>{" "}
+            <p className="p-info"> {currentShip.consumables}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Length:</p> <p className="p-info"> {currentShip.length}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Maximum atmosphering speed:</p>{" "}
+            <p className="p-info"> {currentShip.max_atmosphering_speed}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Hyperdrive rating:</p>{" "}
+            <p className="p-info"> {currentShip.hyperdrive_rating}</p>
+          </div>
+          <div className="text-wrap">
+            <p>Maximum speed in real space:</p>{" "}
+            <p className="p-info"> {currentShip.MGLT + "MGLT"}</p>
+          </div>
         </StyledText>
       </FrameStarShips>
     </>
