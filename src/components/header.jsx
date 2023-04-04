@@ -35,9 +35,9 @@ export const Header = () => {
               LOG IN
             </a>{" "}
             //{" "}
-            <a href="#" className="register-link">
+            <Link to="/LoginForm" className="register-link">
               REGISTER
-            </a>
+            </Link>
           </p>
         </div>
       </div>
