@@ -3,6 +3,7 @@ import "../index.css";
 import { StyleStarshipList } from "../styles/styled";
 import React, { useContext } from "react";
 import { StarsContext } from "../context/contextStarship";
+import { Header } from "./header";
 
 // Definiendo el componente ShipList
 export function ShipList() {
@@ -12,6 +13,7 @@ export function ShipList() {
   // Retornando el JSX del componente
   return (
     <>
+      <Header />
       {/* Iterando sobre la lista de naves espaciales */}
       {ships.map(({ name, model }) => (
         // Creando un componente Link para cada nave espacial
