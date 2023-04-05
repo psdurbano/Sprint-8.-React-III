@@ -80,10 +80,22 @@ export const StyleStarshipList = styled.div`
 
 //Formulario
 
+export const CenteredFormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: auto;
+  padding: 10%;
+`;
+
+export const RegisterFormContainer = styled(CenteredFormContainer)``;
+
 export const StyledForm = styled.form`
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 5px;
+  font-family: "Orbitron", sans-serif;
+  background-color: white;
+  padding: 10%;
+  border-radius: 10%;
 `;
 
 export const StyledLabel = styled.label`
@@ -94,17 +106,20 @@ export const StyledLabel = styled.label`
 `;
 
 export const StyledInput = styled.input`
+  font-family: "Orbitron", sans-serif;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 5%;
+  border: 2px solid grey;
   border-radius: 5px;
 `;
 
 export const StyledButton = styled.button`
-  background-color: #4caf50;
-  color: white;
+  display: flex;
+  font-family: "Orbitron", sans-serif;
+  background-color: rgb(255, 232, 31);
+  color: black;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -118,8 +133,9 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledAlert = styled.div`
+  font-family: "Orbitron", sans-serif;
   padding: 10px;
-  background-color: #f44336;
+  background-color: #e04846;
   color: white;
   margin-top: 10px;
   border-radius: 5px;
