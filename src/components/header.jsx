@@ -31,9 +31,9 @@ export const Header = () => {
         </div>
         <div className="header-right">
           <p className="register">
-            <a href="#" className="register-link">
+            <Link to="/Login" className="register-link">
               LOG IN
-            </a>{" "}
+            </Link>{" "}
             //{" "}
             <Link to="/LoginForm" className="register-link">
               REGISTER

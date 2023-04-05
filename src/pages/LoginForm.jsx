@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../components/header";
 import {
   StyledForm,
@@ -12,12 +12,12 @@ import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
   // Definir los estados iniciales
-  const [username, setUsername] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [emailInvalid, setEmailInvalid] = React.useState(false);
-  const [passwordInvalid, setPasswordInvalid] = React.useState(false);
-  const [enabled, setEnabled] = React.useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailInvalid, setEmailInvalid] = useState(false);
+  const [passwordInvalid, setPasswordInvalid] = useState(false);
+  const [enabled, setEnabled] = useState(false);
   const navigate = useNavigate();
 
   // Función que se llama cuando se envía el formulario
@@ -44,7 +44,8 @@ function RegisterForm() {
     }
 
     // Guardar el usuario en el local storage
-    localStorage.setItem("user", JSON.stringify({ username, email, password }));
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
   };
 
   // Función que se llama cuando se ingresa un nombre de usuario
